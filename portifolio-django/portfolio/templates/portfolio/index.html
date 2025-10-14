@@ -1,0 +1,223 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gian Pedro | Desenvolvedor Web & DevSecOps</title>
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">Gian Pedro</a>
+            </div>
+            <nav>
+                <a href="#projetos">#projetos</a>
+                <a href="#certificados">#Certificados</a>
+                <a href="#sobre-mim">#sobre-mim</a>
+                <a href="#contato">#contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="home" id="home">
+            <div class="home-text">
+                <h1>Gian Pedro: Desenvolvedor <span>web & DevSecOps</span></h1>
+                <p>Desenvolvendo e automatizando aplicações, do código à infraestrutura.</p>
+                <a href="#contato" class="btn">Entrar em contato <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="home-image">
+                <img src="files/Gemini_Generated_Image_j9oxu2j9oxu2j9ox (1).png" alt="Desenvolvedor trabalhando no portfolio">
+                <div class="image-caption">
+                    <div class="indicator"></div>
+                    Atualmente Estagiando sobre <strong>DevSecOps</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote">
+            <blockquote>
+                "Com grande poder vem grande conta de luz"
+            </blockquote>
+            <cite>- Dr. Web</cite>
+        </section>
+
+        <section class="projects" id="projetos">
+            <h2><span>#</span>projetos</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="card-tags">Aws User-data Load-Blance EFS RDS Auto Scaling Group.</div>
+                    <div class="card-content">
+                        <h3>WordPress Escalável na AWS</h3>
+                        <p>Este projeto descreve uma infraestrutura robusta e escalável para hospedar WordPress de forma containerizada na AWS, utilizando scripts de User Data.</p>
+                        <a href="https://github.com/gianpedrobc/Sprint-2-worpress-aws" class="project-link" target="_blank">Github <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-tags">Aws User-data Nginx Webhook Script de monitoramento</div>
+                    <div class="card-content">
+                        <h3>Projeto: Infraestrutura Web com Monitoramento na AWS</h3>
+                        <p>Criar uma estrutura básica para um site que funcione 24 horas por dia, de forma segura, na AWS.</p>
+                        <a href="https://github.com/gianpedrobc/Sprint-1-" class="project-link" target="_blank">Github <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-tags">React.js Css Html Cdn </div>
+                    <div class="card-content">
+                        <h3>Portifolio para web1</h3>
+                        <p>codigo do meu portifolio criado para web1 em react.js usando flex-box e mais.</p>
+                        <a href="https://github.com/gianpedrobc/Portifolio" class="project-link" target="_blank">Github <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <h2><span>#</span>skills</h2>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h4>Linguagens</h4>
+                    <p>Python JavaScript</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Ferramentas</h4>
+                    <p>Docker AWS Kubernetes Git GitOps</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Outros</h4>
+                    <p>Linux FinOps</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Frameworks</h4>
+                    <p>Django React.js </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="certifications" id="certificados">
+            <h2><span>#</span>Certificados</h2>
+            <div class="certifications-grid">
+
+                <div class="certificate-card">
+                    <div class="cert-issuer">
+                         KodeKloud
+                    </div>
+                    <h3>Online Kubernetes Lab for Beginners - Hands On</h3>
+                    <p>Competências: Kubernets,Docker ,DevOps</p>
+                    <a href="https://learn.kodekloud.com/user/certificate/a2da243f-17e5-4303-a5fa-a73babe24ae9" class="btn-verify" target="_blank" rel="noopener noreferrer">
+                        Ver Credencial <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="cert-issuer">
+                        FinOps Foundation
+                    </div>
+                    <h3>Introduction to FinOps</h3>
+                    <p>Competências: FinOps, Aws</p>
+                    <a href="https://verify.skilljar.com/c/c4k278qki3o7" class="btn-verify" target="_blank" rel="noopener noreferrer">
+                        Ver Credencial <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                <div class="certificate-card">
+                    <div class="cert-issuer">
+                         KodeKloud
+                    </div>
+                    <h3>Docker for the Absolute Beginner</h3>
+                    <p>Competências: Docker, DevOps,</p>
+                    <a href="https://verify.skilljar.com/c/c4k278qki3o7" class="btn-verify" target="_blank" rel="noopener noreferrer">
+                        Ver Credencial <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                
+                </div>
+        </section>
+
+        <section class="about" id="sobre-mim">
+            <h2><span>#</span>sobre-mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Olá, eu sou o Gian!
+                    </p>
+                    <p>
+                        Sou um desenvolvedor web e estudante dedicado de DevSecOps, focado em criar e proteger aplicações modernas, responsivas e seguras.
+                    </p>
+                    <p>
+                        Minha experiência vai desde a criação de interfaces com React até a configuração de pipelines CI/CD e automação de infraestrutura com segurança integrada. Meu objetivo é sempre aprender e aplicar as melhores práticas para otimizar processos e superar desafios na indústria digital.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="{% static 'files/Gemini_Generated_Image_j9oxu2j9oxu2j9ox (1).png' %}" alt="Desenvolvedor" >
+                </div>
+            </div>
+        </section>
+
+        <main> <section class="contact" id="contato">
+        <h2><span>#</span>contato</h2>
+        <div class="contact-content">
+            <p>Estou aberto a oportunidades de freelancer, estágio e projetos. Se você tiver uma proposta, dúvida ou simplesmente quiser se conectar, não hesite em me contatar por um dos canais abaixo.</p>
+            <div class="contact-box">
+                <h4>Mande uma mensagem</h4>
+
+                <a href="mailto:devgianpedro@gmail.com"  target="_blank" class="contact-link">
+                    <i class="fa-solid fa-envelope"></i> devgianpedro@gmail.com
+                </a>
+
+                <a href="https://www.linkedin.com/in/gianpedrobc/" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin"></i> /Gianpedrobc
+                </a>
+
+                <a href="https://www.instagram.com/gian_pedrobc/" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i> @Gianpedrobc
+                </a>
+
+                <a href="https://wa.me/5571912345678" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i> Converse pelo WhatsApp
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <strong>Gian Pedro</strong>
+                    <a href="mailto:devgianpedro@gmail.com" target="_blank">gian pedro</a>
+                    <p>Desenvolvedor Web e DevSecOps</p>
+                </div>
+                <div class="footer-media">
+                    <h4>Media</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/gianpedrobc" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/gianpedrobc/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/gian_pedrobc/" target="_blank"><i class="fa-brands fa-instagram" target="_blank"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Copyright 2025. Feito por Gian Pedro</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+</body>
+</html>
