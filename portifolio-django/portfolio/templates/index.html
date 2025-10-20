@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gian Pedro | Desenvolvedor Web & DevSecOps</title>
+
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    </head>
+    <body>
+
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="#">Gian Pedro</a>
+                </div>
+                <nav>
+                    <a href="#projetos">#projetos</a>
+                    <a href="#certificados">#Certificados</a>
+                    <a href="#sobre-mim">#sobre-mim</a>
+                    <a href="#contato">#contato</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+
+            <section class="home" id="home">
+                {% if apresentacao %}
+                <div class="home-text">
+                    <h1>{{ apresentacao.nome }}: {{ apresentacao.titulo }}</h1>
+                    <p>{{ apresentacao.descricao }}</p>
+                    <a href="{{ apresentacao.link_contato }}" class="btn">Entrar
+                        em contato</a>
+                </div>
+                <div class="home-image">
+                    <img src="{{ apresentacao.imagem.url }}" alt="Foto de {{ apresentacao.nome }}">
+                </div>
+                {% endif %}
+            </section>
+
+        
+            <section class="projects" id="projetos">
+                <h2><span>#</span>projetos</h2>
+                <div class="project-grid">
+                    {% for projeto in projetos %}
+                    <div class="project-card">
+                        <div class="card-tags">{{ projeto.tags }}</div>
+                        <div class="card-content">
+                            <h3>{{ projeto.titulo }}</h3>
+                            <p>{{ projeto.descricao }}</p>
+                            {% if projeto.imagem %}
+                            <img src="{{ apresentacao.imagem.url }}" alt="Foto do {{ apresentacao.nome }}">
+
+                                alt="{{ projeto.titulo }}" width="250">
+                            {% endif %}
+                            {% if projeto.link %}
+                            <a href="{{ projeto.link }}" class="project-link"
+                                target="_blank">
+                                Github <i class="fa-brands fa-github"></i>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% empty %}
+                    <p>Nenhum projeto cadastrado ainda.</p>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- Sessão de Skills -->
+            <section class="skills" id="skills">
+                <h2><span>#</span>skills</h2>
+                <div class="skills-grid">
+                    {% for skill in skills %}
+                    <div class="skill-box">
+                        <h4>{{ skill.categoria }}</h4>
+                        <p>{{ skill.habilidades }}</p>
+                    </div>
+                    {% empty %}
+                    <p>Nenhuma skill cadastrada ainda.</p>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- Sessão de Certificados -->
+            <section class="certifications" id="certificados">
+                <h2><span>#</span>Certificados</h2>
+                <div class="certifications-grid">
+                    {% for cert in certificados %}
+                    <div class="certificate-card">
+                        <div class="cert-issuer">{{ cert.emissor }}</div>
+                        <h3>{{ cert.titulo }}</h3>
+                        <p>Competências: {{ cert.competencias }}</p>
+                        {% if cert.link %}
+                        <a href="{{ cert.link }}" class="btn-verify"
+                            target="_blank">
+                            Ver Credencial <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                    {% empty %}
+                    <p>Nenhum certificado cadastrado ainda.</p>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- Sessão Sobre Mim -->
+            <section class="about" id="sobre-mim">
+                <h2><span>#</span>sobre-mim</h2>
+                <div class="about-content">
+                    {% if sobre %}
+                    <div class="about-text">
+                        <p>{{ sobre.descricao }}</p>
+                    </div>
+                    {% if sobre.imagem %}
+                    <div class="about-image">
+                        <img src="{{ sobre.imagem.url }}" alt="Foto do Gian Pedro">
+                    </div>
+                    {% endif %}
+                    {% else %}
+                    <p>Informações sobre mim ainda não cadastradas.</p>
+                    {% endif %}
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Gian Pedro - Desenvolvedor Web &
+                        DevSecOps</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+
+    </body>
+</html>
